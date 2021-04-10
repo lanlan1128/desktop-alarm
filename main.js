@@ -67,7 +67,7 @@ function initialize() {
   app.on("window-all-closed", () => {
     // 苹果禁止监听此事件
     if (process.platform !== "darwin" && !trayOn) {
-      appIcon.destroy();
+      if (appIcon) appIcon.destroy();
       app.quit();
     }
   });
