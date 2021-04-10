@@ -1,0 +1,14 @@
+/* Custom Properties */
+
+:root {
+  --color: hsl(0, 0%, 22%);
+  --color-subtle: hsl(0, 0%, 44%);
+  --color-notice: hsl(0, 0%, 56%);
+  --color-strong: hsl(0, 0%, 11%);
+  --color-link: hsl(0, 0%, 22%);
+
+  --color-border: hsl(0, 0%, 88%);
+  --color-bg: hsl(0, 0%, 96%);
+
+  --color-accent: black; /* Fallback */
+}

@@ -1,0 +1,38 @@
+<template class="task-template">
+  <section data-section="clock">
+    <div class="clock-wrapper">
+      <section class="virtual-clock"></section>
+      <section class="border-clock"></section>
+      <section class="clock">
+        <ul>
+          <li><i>12</i></li>
+          <li><i>1</i></li>
+          <li><i>2</i></li>
+          <li><i>3</i></li>
+          <li><i>4</i></li>
+          <li><i>5</i></li>
+          <li><i>6</i></li>
+          <li><i>7</i></li>
+          <li><i>8</i></li>
+          <li><i>9</i></li>
+          <li><i>10</i></li>
+          <li><i>11</i></li>
+        </ul>
+
+        <h2>beijing</h2>
+        <h3>best-wishes-for-you</h3>
+
+        <output class="date"></output>
+
+        <div class="minutes"></div>
+        <div class="hours"></div>
+        <div class="seconds"></div>
+        <div class="cercle"></div>
+      </section>
+    </div>
+
+    <script type="text/javascript">
+      require("./renderer-process/clock.js");
+    </script>
+  </section>
+</template>

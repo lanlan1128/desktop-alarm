@@ -1,0 +1,146 @@
+/* Fonts ---------------------------- */
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Code Pro"), local("SourceCodePro"),
+    url(fonts/SourceCodePro-Regular.ttf) format("truetype");
+}
+
+/* Global ---------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: "BlinkMacSystemFont", "Lucida Grande", "Segoe UI", Ubuntu,
+    Cantarell, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden; /* Prevents rubber-band scrolling of the whole "page" */
+  color: var(--color);
+  background-color: #fff; /* To cover OSes with no default background color */
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+}
+
+a {
+  color: var(--color-link);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.12em;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid hsla(0, 0%, 0%, 0.08);
+  border-width: 0 1px 1px 0;
+}
+th {
+  background-color: hsla(0, 0%, 50%, 0.06);
+}
+th,
+td {
+  text-align: center;
+  border: 1px solid hsla(0, 0%, 0%, 0.08);
+  border-width: 1px 0 0 1px;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* Code */
+
+code,
+kbd {
+  font-family: "Source Code Pro", monospace;
+  border-radius: 4px;
+  padding: 1px 4px;
+  white-space: nowrap;
+  color: hsl(0, 0%, 36%);
+  background-color: hsla(0, 0%, 60%, 0.15);
+}
+
+pre,
+kbd {
+  font-size: 13px;
+  overflow: auto;
+  padding: 1em;
+  margin: 0;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--color-border);
+  background-color: white;
+}
+
+pre code {
+  white-space: pre;
+}
+
+pre > .hljs {
+  color: var(--color-subtle);
+  background-color: white;
+}
+
+kbd {
+  padding: 0.5em;
+}
+
+/* Button ---------------------------- */
+.am-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.5em 1em;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.am-btn-secondary {
+  color: #fff;
+  background-color: #3bb4f2;
+  border-color: #3bb4f2;
+  margin-right: 0.8rem;
+}

@@ -1,0 +1,163 @@
+<template class="task-template">
+  <div id="settings-modal" class="settings modal">
+    <div class="settings-wrapper">
+      <header class="settings-header">
+        <h2>时间设置</h2>
+      </header>
+      <main class="settings-secitons">
+        <section class="settings-section">
+          <div class="settings-row">
+            <span>上班：</span>
+            <input
+              type="number"
+              id="input-work-am-start-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-work-am-start-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分 ~ </span>
+            <input
+              type="number"
+              id="input-work-pm-end-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-work-pm-end-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分</span>
+          </div>
+
+          <div class="settings-row">
+            <span>午休：</span>
+            <input
+              type="number"
+              id="input-work-am-end-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-work-am-end-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分 ~ </span>
+            <input
+              type="number"
+              id="input-work-pm-start-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-work-pm-start-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分</span>
+          </div>
+
+          <div class="settings-row">
+            <span>打卡：</span>
+            <input
+              type="number"
+              id="input-clock-start-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-clock-start-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分、</span>
+
+            <input
+              type="number"
+              id="input-clock-end-hour"
+              maxlength="2"
+              size="2"
+            />
+            <span>时 : </span>
+            <input
+              type="number"
+              id="input-clock-end-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分</span>
+          </div>
+
+          <div class="settings-row">
+            <span>休息：</span>
+            <input
+            type="text"
+              id="input-work-remind-minute"
+              size="2"
+              class="long-input"
+            />
+            <span>分
+            <span class="notice-text"
+              >(设定在第几分钟提醒休息，可用“、”分割)</span
+            >
+          </div>
+
+          <div class="settings-row">
+            <span>间隔：</span>
+            <input
+              type="number"
+              id="input-work-rest-minute"
+              maxlength="2"
+              size="2"
+            />
+            <span>分</span>
+            <span class="notice-text">(休息的间隔)</span>
+          </div>
+
+          <div class="settings-row">
+            <span>周末：</span>
+            <input type="checkbox" id="input-saturday-check" value="first_checkbox">
+            <label for="cbox1">周六</label>
+
+            <input type="checkbox" id="input-sunday-check" value="first_checkbox">
+            <label for="cbox1">周日</label>
+          </div>
+
+          <div class="settings-row">
+            <span>运行：</span>
+            <input type="checkbox" id="input-bg-process-check" value="check">
+            <label for="cbox1">后台运行</label>
+          </div>
+        </section>
+
+        <footer class="setting-section footer">
+          <button id="button-save" class="am-btn am-btn-secondary modal-hide">
+            保存
+          </button>
+          <button id="btn-cancel" class="am-btn am-btn-secondary modal-hide">
+            取消
+          </button>
+        </footer>
+      </main>
+    </div>
+
+    <script type="text/javascript">
+      require("./renderer-process/settings");
+    </script>
+  </div>
+</template>

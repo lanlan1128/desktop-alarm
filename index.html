@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/nativize.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/clock.css" />
+    <link rel="stylesheet" href="assets/css/settings.css" />
+    <link rel="stylesheet" href="assets/css/github.css" />
+
+    <link rel="import" href="sections/clock.html" />
+    <link rel="import" href="sections/settings.html" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main-wrapper">
+        <header class="main-header" id="clock-section"></header>
+        <main class="main-sections">
+          <section class="main-section main-work">
+            <h2>每天八杯水</h2>
+            <p>
+              主人，您设置的工作日上班时间为早上
+              <code id="work-am-start-hour" class="hljs-number"></code>:<code
+                id="work-am-start-minute"
+                class="hljs-number"
+              ></code
+              >-<code id="work-am-end-hour" class="hljs-number"></code>:<code
+                id="work-am-end-minute"
+                class="hljs-number"
+              ></code
+              >，下午
+              <code id="work-pm-start-hour" class="hljs-number"></code>:<code
+                id="work-pm-start-minute"
+                class="hljs-number"
+              ></code
+              >- <code id="work-pm-end-hour" class="hljs-number"></code>:<code
+                id="work-pm-end-minute"
+                class="hljs-number"
+              ></code>
+            </p>
+
+            <p>
+              打卡签入签出的时间为早上
+              <code id="clock-start-hour" class="hljs-number"></code>:<code
+                id="clock-start-minute"
+                class="hljs-number"
+              ></code
+              >，下午<code id="clock-end-hour" class="hljs-number"></code>:<code
+                id="clock-end-minute"
+                class="hljs-number"
+              ></code>
+            </p>
+
+            <p>
+              提醒框将在上班时间的
+              <span id="work-remind-minute" class="hljs-string"></span>
+              分弹出。
+            </p>
+
+            <p>
+              每次休息的时长为
+              <span id="work-rest-minute" class="hljs-string"></span>
+              分钟
+            </p>
+
+            <a id="button-settings" data-modal="settings" class="open-settings"
+              >打开设置</a
+            >
+          </section>
+
+          <footer class="about-section footer">
+            <div class="rainbow-button-wrapper">
+              <button id="btn-alarm-rest" class="about-button modal-hide">
+                休息
+              </button>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </main>
+
+    <script>
+      require("./assets/imports");
+      require("./assets/nav");
+      require("./assets/alarm");
+      require("./assets/index");
+    </script>
+  </body>
+</html>

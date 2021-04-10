@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./../../assets/css/variables.css" />
+<link rel="stylesheet" href="./../../assets/css/nativize.css" />
+<link rel="stylesheet" href="./../../assets/css/global.css" />
+<style>
+  body {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .box {
+    margin: auto;
+  }
+
+  .img {
+    width: 260px;
+    height: auto;
+  }
+
+  h1 {
+    margin-top: 2rem;
+  }
+  
+  #close {
+    opacity: 0.7;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    text-decoration: none;
+  }
+</style>
+
+<div class="box">
+  <img id="img" class="img" />
+  <h1>主人，该午休啦</h2>
+  <a id="close" href="javascript:window.close()">关闭此窗体</a>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    const random = Math.ceil(Math.random() * 28);
+    const src = `./../../assets/img/rest-img-${random}.gif`;
+    const img = document.querySelector("#img");
+    img.src = src;
+  });
+</script>

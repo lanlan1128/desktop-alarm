@@ -1,0 +1,151 @@
+/* Main ------------------ */
+
+.main {
+  --main-space: 4rem;
+
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.main.is-shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-wrapper {
+  margin: auto;
+}
+
+.main-header {
+  padding: var(--main-space) 0;
+  border-bottom: 1px solid hsl(0, 0%, 88%);
+}
+
+.main-sections {
+  max-width: 680px;
+  padding: 0 var(--main-space);
+}
+
+.main-section {
+  margin: var(--main-space) 0;
+}
+
+.main h2 {
+  text-align: center;
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
+  color: hsl(0, 0%, 55%);
+}
+
+.main-line {
+  margin: 1em 0;
+}
+
+.main .main-work h2 {
+  color: hsl(330, 65%, 55%);
+}
+
+.main .main-other h2 {
+  color: hsl(222, 53%, 50%);
+}
+
+.main-section pre {
+  display: inline;
+}
+
+.about-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.4em 1.2em;
+  font: inherit;
+  font-size: 1.6em;
+  color: inherit;
+  border: 2px solid;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.about-button:focus {
+  outline: none;
+  border-color: hsl(0, 0%, 88%);
+}
+
+footer.about-section {
+  text-align: center;
+}
+
+.rainbow-button-wrapper {
+  --rainbow-button-width: 170px;
+  --rainbow-button-height: 50px;
+  --rainbow-button-width-inner: 164px;
+  --rainbow-button-height-inner: 44px;
+  --rainbow-color-1: hsl(116, 30%, 36%);
+  --rainbow-color-2: hsl(194, 60%, 36%);
+  --rainbow-color-3: hsl(222, 53%, 50%);
+  --rainbow-color-4: hsl(285, 47%, 46%);
+  --rainbow-color-5: hsl(330, 65%, 48%);
+  --rainbow-color-6: hsl(32, 79%, 49%);
+  --rainbow-color-7: hsl(53, 84%, 50%);
+
+  display: inline-block;
+  width: var(--rainbow-button-width);
+  height: var(--rainbow-button-height);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.rainbow-button-wrapper:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: var(--rainbow-button-height);
+  background: #ccc;
+  background: linear-gradient(
+    to right,
+    var(--rainbow-color-1) 0%,
+    var(--rainbow-color-2) 14%,
+    var(--rainbow-color-3) 28%,
+    var(--rainbow-color-4) 42%,
+    var(--rainbow-color-5) 56%,
+    var(--rainbow-color-6) 70%,
+    var(--rainbow-color-7) 84%,
+    var(--rainbow-color-1) 100%
+  );
+  background-position: -200px 0;
+  transition: all 0.5s;
+  content: "";
+}
+
+.rainbow-button-wrapper button {
+  width: var(--rainbow-button-width-inner);
+  height: var(--rainbow-button-height-inner);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border: none;
+  background: white;
+  color: black;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.rainbow-button-wrapper:hover:before {
+  background-position: 200px 0;
+}
+
+@media (min-width: 940px) {
+  .main-wrapper {
+    display: flex;
+  }
+  .main-header {
+    align-self: center;
+    padding: var(--main-space);
+    border-right: 1px solid hsl(0, 0%, 88%);
+    border-bottom: none;
+  }
+}
