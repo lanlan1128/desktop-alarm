@@ -67,7 +67,7 @@ function updateTime() {
   const second = date.getSeconds();
   const week = date.getDay();
 
-  if (preMinute !== undefined || preMinute !== minute) {
+  if (preMinute === undefined || preMinute !== minute) {
     preMinute = minute;
     currentMinuteHasInvoke = false;
   }
